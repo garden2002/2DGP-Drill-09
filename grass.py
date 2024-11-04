@@ -1,16 +1,12 @@
 from pico2d import load_image
-from pygame.examples.cursors import image
 
 
 class Grass:
-    image = None
-    def __init__(self, x = 400, y = 30):
-        if Grass.image ==None:
-            Grass.image = load_image('grass.png')
-        self.x, self.y = x, y
+    def __init__(self):
+        self.image = load_image('grass.png')
 
     def draw(self):
-        self.image.draw(self.x, self.y)
+        self.image.draw(400, 30)
 
     def update(self):
         pass
